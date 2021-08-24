@@ -1,3 +1,10 @@
+:root {
+  --mainColor: #3d2b26;
+  --bgColor: #665521;
+  --secondaryColor: #fff;
+  --iconColor: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +12,8 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #665521, #3d2b26);
-  color: #fff;
+  background-image: linear-gradient(120deg, var(--bgColor), var(--mainColor));
+  color: var(--secondaryColor);
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
 }
@@ -28,19 +35,19 @@ form button {
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
-  background: #fff;
+  background: var(--secondaryColor);
 }
 
 form button {
-  color: #3d2b26;
-  background: #fff;
+  color: var(--mainColor);
+  background: var(--secondaryColor);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form button:hover {
-  background: #3d2b26;
-  color: #fff;
+  background: var(--mainColor);
+  color: var(--secondaryColor);
 }
 
 .todo-container {
@@ -56,8 +63,8 @@ form button:hover {
 
 .todo {
   margin: 0.5rem;
-  background: #fff;
-  color: #000;
+  background: var(--secondaryColor);
+  color: var(--iconColor);
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -72,7 +79,7 @@ form button:hover {
 .trash-btn,
 .complete-btn {
   background: #b32323;
-  color: #fff;
+  color: var(--secondaryColor);
   border: none;
   margin: 5px 2px  0 5px;
   padding: 5px;
@@ -94,7 +101,7 @@ form button:hover {
   background: #97be6f;
   margin: 5px 5px  2px 5px;
   padding: 5px;
-  color: #000;
+  color: var(--iconColor);
 }
 
 .todo-item {
@@ -107,7 +114,7 @@ form button:hover {
 
 .fa-check {
   pointer-events: none;
-  color: #fff;
+  color: var(--secondaryColor);
 }
 
 .completed {
@@ -126,7 +133,7 @@ select {
   appearance: none;
   outline: none;
   border: none;
-  color: black;
+  color: var(--iconColor);
   width: 10rem;
   cursor: pointer;
   padding: 1.1rem;
@@ -141,7 +148,7 @@ select {
 .select::after {
   content: "\25BC";
   position: absolute;
-  background: #3d2b26;
+  background: var(--mainColor);
   top: 0;
   right: 0;
   padding: 1.1rem;
@@ -150,11 +157,11 @@ select {
 }
 
 .select:hover::after {
-  background: white;
-  color: #3d2b26;
+  background: var(--secondaryColor);
+  color: var(--mainColor);
 }
 
-.alert-success {
+.alert-success, .alert-danger {
   font-family: Verdana, sans-serif;
   font-size: 15px;
   line-height: 1rem;
@@ -167,27 +174,15 @@ select {
   border: 1px solid transparent;
   border-radius: 4px;
   padding-right: 5px;
-  color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
   opacity: 1;
 }
 
+.alert-success {
+  color: #3c763d;
+}
+
 .alert-danger {
-  font-family: Verdana, sans-serif;
-  width: 30vw;
-  font-size: 15px;
-  line-height: 1rem;
-  box-sizing: inherit;
-  transition: opacity 0.15s linear;
-  padding: 5px;
-  margin-bottom: 5px;
-  margin-left: 27%;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  padding-right: 5px;
   color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
-  opacity: 1;
 }
