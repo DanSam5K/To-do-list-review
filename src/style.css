@@ -161,7 +161,8 @@ select {
   color: var(--mainColor);
 }
 
-.alert-success, .alert-danger {
+.alert-success,
+.alert-danger {
   font-family: Verdana, sans-serif;
   font-size: 15px;
   line-height: 1rem;
